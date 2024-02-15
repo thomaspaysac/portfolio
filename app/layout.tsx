@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { montserrat } from "./lib/fonts";
-import Header from "./ui/Header";
+import Header from "./ui/header/Header";
 import Footer from "./ui/Footer";
 
 

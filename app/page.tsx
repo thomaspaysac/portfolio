@@ -18,7 +18,7 @@ export default function Home() {
       <div className="tech_stacks flex flex-col md:flex-row justify-between gap-10 my-10">
         <div>
           <h3 className="mb-3"><code>Développement Frontend></code></h3>
-          <div className="flex gap-4">
+          <div className="flex row-span-2 gap-4">
             {
               techs_frontend.map((tech) => {
                 return <Card key={tech.id} source={tech.source} caption={tech.caption} />
