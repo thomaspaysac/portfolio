@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main>
+        <main className="bg-zinc-700">
           {children}
         </main>
         <Footer />
