@@ -2,8 +2,10 @@
 
 import "../../globals.css";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import HeaderAnimatedIcon from "./icon";
 
 const links = [
   { name: 'À propos', href: '/'},
@@ -16,7 +18,7 @@ export default function Header () {
 
   return (
     <header className="flex gap-6 items-center py-4 px-20 bg-zinc-800 text-gray-50 ">
-      <h1 className="mr-auto">T</h1>
+      <Image src={'/header_icon.svg'} width={48} height={48} unoptimized={true} alt='' className="mr-auto" />
       {
         links.map((link, i) => {
           return (

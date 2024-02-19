@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+main {
+  background: url('../public/background.jpg');
+  background-size: cover;
+}
+
+
 .nav-link {
   text-decoration: underline 4px rgba(255,255,255,0);
   text-underline-offset: 0;
@@ -45,4 +51,13 @@
 .tech-card:hover::before {
   opacity: 1;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.item {
+  width: 56%;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }

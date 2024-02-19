@@ -3,6 +3,7 @@ import "./globals.css";
 import { montserrat } from "./lib/fonts";
 import Header from "./ui/header/Header";
 import Footer from "./ui/Footer";
+import PageTransition from "./ui/transition";
 
 
 export const metadata: Metadata = {
@@ -19,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <Header />
-        <main className="bg-zinc-700">
-          {children}
-        </main>
+          <main className="bg-zinc-700">
+            {children}
+          </main>
         <Footer />
       </body>
     </html>
