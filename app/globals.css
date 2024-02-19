@@ -18,3 +18,31 @@
   text-decoration-color: rgba(79, 70, 229,1);
   text-underline-offset: 8px;
 }
+
+.tech-card {
+  background: linear-gradient(to bottom right, rgba(82,82,91,1) 0%, rgba(63,63,70,1) 100%);
+  transition: all 500ms ease-out;
+}
+
+.tech-card::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(113,113,122,1),
+    rgba(63,63,70,1)
+  );
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.tech-card:hover::before {
+  opacity: 1;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}

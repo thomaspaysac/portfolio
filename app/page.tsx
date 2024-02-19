@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </div>
       <div className="tech_stacks flex flex-col md:flex-row justify-between gap-10 my-10">
-        <div>
+        <div className="tech-card backdrop-blur p-4 rounded-lg shadow-lg">
           <h3 className="mb-3"><code>Développement Frontend></code></h3>
           <div className="flex row-span-2 gap-4">
             {
@@ -26,7 +26,7 @@ export default function Home() {
             }
           </div>
         </div>
-        <div>
+        <div className="tech-card backdrop-blur p-4 rounded-lg shadow-lg">
           <h3 className="mb-3"><code>Développement Backend | Bases de données></code></h3>
           <div className="flex gap-4">
             {
