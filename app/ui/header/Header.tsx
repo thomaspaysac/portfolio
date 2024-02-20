@@ -36,9 +36,11 @@ export default function Header () {
           )
         })
       }
-      <button className="bg-indigo-500 px-5 py-2 font-bold text-white rounded transition-all hover:bg-indigo-600 hover:cursor-pointer">
-        Contactez-moi
-      </button>
+      <Link href="/contacts">
+        <button className="bg-indigo-500 px-5 py-2 font-bold text-white rounded transition-all hover:bg-indigo-600 hover:cursor-pointer">
+          Contactez-moi
+        </button>
+      </Link>
     </header>
   )
 }
