@@ -1,6 +1,7 @@
 ## A faire
 - Ajouter photo à la page d'accueil (sur la droite, en fond)
-- Version mobile: travailler le header et afficher les techs en grid pour s'adapter au format
+- Version mobile
+- Page 404
 
 ## Deploy on Vercel
 

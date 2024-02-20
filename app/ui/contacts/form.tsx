@@ -22,7 +22,6 @@ export default function Form () {
         }
       }}
     >
-      <h2 className="text-xl mb-4"><label htmlFor="message">Contactez-moi par email</label></h2>
       <div className="mb-4">
         <label htmlFor="nom" className="mr-2">Votre nom :</label>
         <input type="text" id="nom" name="nom" className="bg-zinc-300 text-black p-2 rounded-lg" maxLength={50} required></input>

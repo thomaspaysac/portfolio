@@ -63,8 +63,24 @@ const projects = [
   {}
 ]
 
+const social_links = [
+  {
+    id: "linkedin",
+    nom: "LinkedIn",
+    url: "https://www.linkedin.com/in/thomas-paysac-5a2713254/",
+    image: "/icons/linkedin.png",
+  },
+  {
+    id: "github",
+    nom: "GitHub",
+    url: "https://github.com/thomaspaysac",
+    image: "/icons/github-mark-white.svg"
+  }
+]
+
 module.exports = {
   techs_frontend,
   techs_backend,
+  social_links,
   projects
 }
