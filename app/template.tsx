@@ -11,7 +11,7 @@ export default function PageTransition ({
     <motion.div
       initial={{ opacity: 0}}
       animate={{ opacity: 1 }}
-      transition={{ ease: 'easeInOut', duration: 0.5}}
+      transition={{ ease: 'easeInOut', duration: 0.33}}
     >
       {children}
     </motion.div>

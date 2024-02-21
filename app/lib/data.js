@@ -60,7 +60,18 @@ const techs_backend = [
 ]
 
 const projects = [
-  {}
+  {
+    id: "textera",
+    nom: "textera",
+    description: "C'est Textera",
+    url: "https://textera.netlify.app/",
+    screenshots: [
+      "/screens/textera/1.jpg",
+      "/screens/textera/2.jpg",
+      "/screens/textera/3.jpg",
+      "/screens/textera/4.jpg",
+    ]
+  }
 ]
 
 const social_links = [
