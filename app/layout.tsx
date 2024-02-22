@@ -3,8 +3,6 @@ import "./globals.css";
 import { montserrat } from "./lib/fonts";
 import Header from "./ui/header/Header";
 import Footer from "./ui/Footer";
-import PageTransition from "./ui/transition";
-
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -7,50 +7,47 @@ type Props = {
   nom: string,
   description: string,
   screenshots: string[],
-  url: string
+  url: string,
+  odd: boolean
 }
 
 function ScreenshotsContainer ({ hover, screenshots } : { hover: boolean, screenshots: string[] }) {
-  if (!hover) {
-    return (
-      <div className="h-[32rem]">
-        <Image className="project-screenshot_main relative" src={screenshots[0]} width={200} height={200} unoptimized={true} alt="" />
+  return (
+    <>
+      <Image className={`project-screenshot_main absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 object-contain rounded shadow-lg transition-opacity duration-700 ${hover ? 'opacity-0' : 'opacity-1'}`}
+        src={screenshots[0]} width={800} height={800} unoptimized={true} alt=""
+      />
+      <div className={`absolute flex w-full h-full skew-y-2 justify-center align-center transition-opacity duration-700 ${hover ? 'opacity-1' : 'opacity-0'}`}>
+      {
+        screenshots.slice(1).reverse().map((el, i) => {
+          const offset = screenshots.length;
+          return (
+            <Image 
+              className={`absolute object-cover -translate-y-1/2 -translate-x-1/2 outline outline-1 rounded outline-black`} key={i} src={el} width={150} height={150} unoptimized={true} alt=""
+              style={{top: `${50+i*4-offset*1.5}%`, left:`${50+i*12-offset*4.5}%`}}   
+            />
+          )
+        })
+      }
       </div>
-    )
-  } else {
-    return (
-      <div className={`project-screenshots relative h-[32rem]`}>
-        {
-          screenshots.slice(1).map((el, i) => {
-            return (
-              <div key={i} 
-                className={`screenshot absolute skew-y-6 outline outline-zinc-900`}
-                style={{zIndex : i, top: `${i*24}px`, left: `${i*64}px`}}  
-              >
-                <Image src={el} width={150} height={150} unoptimized={true} alt="" />
-              </div>
-            )
-          })
-        }
-      </div>
-    )
-  }
+    </>
+  )
 }
 
-export default function ProjectCard ({ nom, description, screenshots, url } : Props) {
+export default function ProjectCard ({ nom, description, screenshots, url, odd } : Props) {
   const [hover, setHover] = useState(false);
 
   return (
     <div 
-      className="project-card border-2 rounded-lg"
+      className={`project-card flex ${odd? 'flex-row' : 'flex-row-reverse'} gap-8 justify-center border-2 h-[600px] rounded-lg`}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
     >
-      <div>
-        <div>{nom}</div>
-        <div>{description}</div>
+      <div className="project-info w-1/3 self-center">
+        <h2 className="text-4xl mb-4">{nom}</h2>
+        <div className="text-lg mb-4">{description}</div>
         <div>{url}</div>
       </div>
-      <div>
+      <div className="project-screenshots relative w-2/3">
         <ScreenshotsContainer hover={hover} screenshots={screenshots} />
       </div>
     </div>

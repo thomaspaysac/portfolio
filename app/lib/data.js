@@ -24,7 +24,7 @@ const techs_frontend = [
     source: "/icons/tailwind.png",
     caption: "Tailwind"
   }
-]
+];
 
 const techs_backend = [
   {
@@ -57,22 +57,7 @@ const techs_backend = [
     source: "/icons/supabase.png",
     caption: "Supabase"
   }
-]
-
-const projects = [
-  {
-    id: "textera",
-    nom: "textera",
-    description: "C'est Textera",
-    url: "https://textera.netlify.app/",
-    screenshots: [
-      "/screens/textera/1.jpg",
-      "/screens/textera/2.jpg",
-      "/screens/textera/3.jpg",
-      "/screens/textera/4.jpg",
-    ]
-  }
-]
+];
 
 const social_links = [
   {
@@ -87,7 +72,35 @@ const social_links = [
     url: "https://github.com/thomaspaysac",
     image: "/icons/github-mark-white.svg"
   }
-]
+];
+
+const projects = [
+  {
+    id: "textera",
+    nom: "Textera",
+    description: "C'est Textera",
+    url: "https://textera.netlify.app/",
+    screenshots: [
+      "/screens/textera/1.png",
+      "/screens/textera/2.jpg",
+      "/screens/textera/3.jpg",
+      "/screens/textera/4.jpg",
+      "/screens/textera/5.jpg",
+    ]
+  },
+  {
+    id: "talkbook",
+    nom: "Talkbook",
+    description: "Réseau social",
+    url: "https://talkbook-app.netlify.app/",
+    screenshots: [
+      "/screens/talkbook/1.png",
+      "/screens/talkbook/2.png",
+      "/screens/talkbook/3.png",
+      "/screens/talkbook/4.png"
+    ]
+  }
+];
 
 module.exports = {
   techs_frontend,
