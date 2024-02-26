@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from "react";
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
+  id: string,
   nom: string,
   description: string,
   screenshots: string[],
@@ -34,7 +36,7 @@ function ScreenshotsContainer ({ hover, screenshots } : { hover: boolean, screen
   )
 }
 
-export default function ProjectCard ({ nom, description, screenshots, url, odd } : Props) {
+export default function ProjectCard ({ id, nom, description, screenshots, url, odd } : Props) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -45,6 +47,11 @@ export default function ProjectCard ({ nom, description, screenshots, url, odd }
       <div className="project-info w-1/3 self-center">
         <h2 className="text-4xl mb-4">{nom}</h2>
         <div className="text-lg mb-4">{description}</div>
+        <Link href={`/portfolio/${id}`}>
+          <button className="bg-indigo-500 px-5 py-2 font-bold text-white rounded transition-all hover:bg-indigo-600 hover:cursor-pointer">
+            Voir les détails
+          </button>
+        </Link>
         <div>{url}</div>
       </div>
       <div className="project-screenshots relative w-2/3">
