@@ -4,12 +4,12 @@ import { projects } from "../lib/data";
 export default function Page () {
   return (
     <div className="flex min-h-screen flex-col p-2 md:px-24 md:py-12 gap-10 text-white">
-      <h1 className="text-4xl font-semibold">Portfolio</h1>
+      <h1 className="text-4xl tracking-wide font-semibold">Portfolio</h1>
       {
         projects.map((el, i) => {
           const parity = i % 2;
           return (
-            <ProjectCard key={el.id} odd={!!parity} id={el.id} nom={el.nom} description={el.description} url={el.url} screenshots={el.screenshots} />
+            <ProjectCard key={el.id} odd={!!parity} id={el.id} nom={el.nom} description={el.description_courte} url={el.url} screenshots={el.screenshots} />
           )
         })
       }

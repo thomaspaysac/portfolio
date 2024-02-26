@@ -34,7 +34,7 @@ const techs_backend = [
   },
   {
     id: "express",
-    source: "icons/express.png",
+    source: "/icons/express.png",
     caption: "Express"
   },
   {
@@ -78,8 +78,14 @@ const projects = [
   {
     id: "textera",
     nom: "Textera",
-    description: "C'est Textera",
+    description_courte: "Application web de messagerie",
+    description_longue: "Application web progressive de messagerie, offrant des conversation privées entre les utilisateurs et des conversations de groupe.",
+    objectif: ["La demande était de créer une application similaire à WhatsApp avec authentification sécurisée des utilisateurs, échange de messages avec un autre utilisateur, et personnalisation du profil utilisateur."],
+    resultat: ["Aux fonctionnalités minimum ont été ajoutées les conversations de groupe et l'envoi d'images. Concernant l'interface, l'application a été pensée « mobile-first » avec un visuel se rapprochant volontairement de WhatsApp.", "Afin de me familiariser avec différents services durant cet exercices, le backend utilise Supabase pour l'authentification des utilisateurs, MongoDB pour la base de données, et Firebase Storage pour le stockage des fichiers image. L'API permettant de communiquer avec ces services a été créée avec Express.", "Le site a par la suite été converti en application web progressive, permettant de bénéficier d'une interface plus naturelle sur téléphone."],
+    frontend: techs_frontend.filter(el => el.id === "react" || el.id === "html" || el.id === "css"),
+    backend: techs_backend.filter(el => el.id === "express" || el.id === "mongodb" || el.id === "firebase" || el.id === "supabase"),
     url: "https://textera.netlify.app/",
+    repo: "https://github.com/thomaspaysac/textera",
     screenshots: [
       "/screens/textera/1.png",
       "/screens/textera/2.jpg",
@@ -92,6 +98,12 @@ const projects = [
     id: "talkbook",
     nom: "Talkbook",
     description: "Réseau social",
+    description_courte: "",
+    description_longue: "",
+    objectif: [],
+    resultat: [],
+    frontend: [],
+    backend: [],
     url: "https://talkbook-app.netlify.app/",
     screenshots: [
       "/screens/talkbook/1.png",

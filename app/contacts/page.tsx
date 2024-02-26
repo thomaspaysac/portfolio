@@ -5,7 +5,7 @@ import { social_links } from "../lib/data";
 export default function Page () {
   return (
     <div className="flex min-h-screen flex-col p-2 md:px-24 md:py-12 gap-10 text-white">
-      <h1 className="text-4xl font-semibold">Contacts</h1>
+      <h1 className="text-4xl tracking-wide font-semibold">Contacts</h1>
       <div>
         <h2 className="text-xl mb-4">Réseaux</h2>
         <div className="flex gap-8">

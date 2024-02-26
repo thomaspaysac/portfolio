@@ -10,7 +10,7 @@ export default function Home() {
     <div className="homepage flex min-h-screen flex-col p-2 md:px-24 md:py-12 gap-10 text-white">
       <div>
         <h1 className="text-6xl mb-8">Thomas Paysac</h1>
-        <h2 className="text-4xl font-bold my-4">Développeur Web Fullstack</h2>
+        <h2 className="text-4xl font-bold tracking-wide my-4">Développeur Web Fullstack</h2>
         <div className="flex items-center gap-1">
           <Image src="/icons/location_icon.svg" width={24} height={24} alt="" />
           <span className="text-2xl">Genève</span>
