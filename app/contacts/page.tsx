@@ -1,6 +1,11 @@
 import Form from "../ui/contacts/form"
 import CardSocial from "../ui/contacts/socialCard";
 import { social_links } from "../lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacts | Thomas Paysac",
+};
 
 export default function Page () {
   return (
