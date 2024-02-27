@@ -29,7 +29,7 @@ export default function Header () {
               className={clsx(
                 'nav-link',
                 {
-                "active underline underline-offset-8 decoration-4 font-bold" : pathname === link.href
+                "active underline underline-offset-8 decoration-4 font-bold" : pathname === link.href || pathname.includes("portfolio") && link.href === '/portfolio'
               })}
             >
                 {link.name}

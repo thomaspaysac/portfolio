@@ -26,7 +26,7 @@ export default function Page () {
         </div>
         <div className="mb-6">
           <h3 className="text-3xl mb-2">L&apos;objectif</h3>
-          <div className="w-full h-0.5 rounded bg-indigo-500 mb-4 shadow-lg"></div>
+          <div className="w-full h-0.5 rounded bg-indigo-500/75 mb-4 shadow-lg"></div>
           {
             projet.objectif.map((el, i) => {
               return (
@@ -37,7 +37,7 @@ export default function Page () {
         </div>
         <div className="mb-6">
           <h3 className="text-3xl mb-2">Le résultat</h3>
-          <div className="w-full h-0.5 rounded bg-indigo-500 mb-4 shadow-lg"></div>
+          <div className="w-full h-0.5 rounded bg-indigo-500/75 mb-4 shadow-lg"></div>
           {
             projet.resultat.map((el, i) => {
               return (
@@ -48,8 +48,8 @@ export default function Page () {
         </div>
         <div className="mb-6">
           <h3 className="text-3xl mb-2">Technologies</h3>
-          <div className="w-full h-0.5 rounded bg-indigo-500 mb-4 shadow-lg"></div>
-          <div className="tech_stacks flex flex-col md:flex-row gap-10 my-10">
+          <div className="w-full h-0.5 rounded bg-indigo-500/75 mb-4 shadow-lg"></div>
+          <div className="tech_stacks flex flex-col md:flex-row gap-10">
             <div className="tech-card backdrop-blur p-4 rounded-lg shadow-lg w-fit">
               <h3 className="mb-3"><code>Frontend{'>'}</code></h3>
               <div className="flex row-span-2 gap-4">
