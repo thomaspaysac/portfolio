@@ -6,7 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { montserrat } from "@/app/lib/fonts";
-import HeaderAnimatedIcon from "./icon";
 
 const links = [
   { name: 'À propos', href: '/'},
