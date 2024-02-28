@@ -13,7 +13,6 @@ export default function Form () {
       ref={ref}
       action={ async (formData) => {
         const res = await sendEmail(formData);
-        console.log(res);
         if (res.status !== 200) {
           setError(true);
         } else {
@@ -25,7 +24,11 @@ export default function Form () {
     >
       <div className="mb-4">
         <label htmlFor="nom" className="mr-2">Votre nom :</label>
-        <input type="text" id="nom" name="nom" className="bg-zinc-300 text-black p-2 rounded-lg" maxLength={50} required></input>
+        <input type="text" id="nom" name="nom" className="bg-zinc-300 text-black p-2 rounded-lg" maxLength={50} required />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="email" className="mr-2">Votre adresse mail :</label>
+        <input type="email" id="email" name="email" className="bg-zinc-300 text-black p-2 rounded-lg" required />
       </div>
       <div className="mb-2">
         <label htmlFor="message">Votre message :</label>

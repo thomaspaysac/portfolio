@@ -12,6 +12,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function sendEmail(formData: FormData) {
   const data = {
     nom: formData.get("nom"),
+    email: formData.get("email"),
     message: formData.get("message")
   };
   try {
@@ -19,7 +20,7 @@ export async function sendEmail(formData: FormData) {
       from: 'Portfolio <portfolio@resend.dev>',
       to: 'paysac.thomas@gmail.com',
       subject: 'Nouveau message',
-      html: `<p>Message de : ${data.nom}</p> <p>Message : ${data.message}</p>`
+      html: `<p>Message de : ${data.nom} (${data.email})</p> <p>Message : ${data.message}</p>`
     });
     return {status: 200, message: "Ok"};
   } catch {
