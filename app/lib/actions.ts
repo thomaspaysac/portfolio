@@ -15,10 +15,10 @@ export async function sendEmail(formData: FormData) {
     message: formData.get("message")
   };
   try {
-    resend.emails.send({
-      from: 'onboarding@resend.dev',
+    const req = await resend.emails.send({
+      from: 'Portfolio <portfolio@resend.dev>',
       to: 'paysac.thomas@gmail.com',
-      subject: 'Portfolio: nouveau message',
+      subject: 'Nouveau message',
       html: `<p>Message de : ${data.nom}</p> <p>Message : ${data.message}</p>`
     });
     return {status: 200, message: "Ok"};

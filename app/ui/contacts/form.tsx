@@ -13,6 +13,7 @@ export default function Form () {
       ref={ref}
       action={ async (formData) => {
         const res = await sendEmail(formData);
+        console.log(res);
         if (res.status !== 200) {
           setError(true);
         } else {
