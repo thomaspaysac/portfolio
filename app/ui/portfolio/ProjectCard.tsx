@@ -16,7 +16,7 @@ type Props = {
 function ScreenshotsContainer ({ hover, screenshots } : { hover: boolean, screenshots: string[] }) {
   return (
     <>
-      <Image className={`project-screenshot_main md:absolute top-1/2 left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 object-contain rounded-2xl shadow-2xl transition-opacity duration-700 ${hover ? 'md:opacity-0' : 'opacity-1'}`}
+      <Image className={`project-screenshot_main md:absolute top-1/2 left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 object-contain shadow-2xl rounded md:rounded-lg md:border-[#E5E5E5] md:border-2 md:border-t-[24px] transition-opacity duration-700 ${hover ? 'md:opacity-0' : 'opacity-1'}`}
         src={screenshots[0]} width={800} height={800} unoptimized={true} alt=""
       />
       <div className={`absolute hidden md:flex w-full h-full skew-y-2 justify-center align-center transition-opacity duration-700 ${hover ? 'md:opacity-1' : 'opacity-0'}`}>
