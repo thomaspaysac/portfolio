@@ -2,7 +2,7 @@ const techs_frontend = [
   {
     id: "js",
     source: "/icons/js.png",
-    caption: "Javascript"
+    caption: "JavaScript"
   },
   {
     id: "react",
