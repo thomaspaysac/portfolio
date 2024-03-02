@@ -54,7 +54,10 @@ export default function ProjectCard ({ id, nom, description, screenshots, url, o
             </button>
           </Link>
           <a href={url} target="_blank">
-              <button className="bg-emerald-500 px-5 py-2 text-white rounded transition-all hover:bg-emerald-600">Visiter le site</button>
+              <button className="bg-emerald-500 flex items-center gap-2 px-5 py-2 text-white rounded transition-all hover:bg-emerald-600">
+                <Image src="/icons/external-link.png" height={16} width={16} alt="" unoptimized={true} />
+                Visiter le site
+              </button>
           </a>
         </div>
       </div>
