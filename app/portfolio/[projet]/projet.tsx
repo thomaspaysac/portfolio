@@ -11,7 +11,7 @@ export default function Projet () {
 
   if (projet) {
     return (
-      <div className="flex min-h-screen flex-col p-2 md:px-64 md:py-12 gap-8 text-white text-lg">
+      <div className="flex min-h-[calc(100vh-80px)] flex-col p-2 md:px-64 md:py-12 gap-8 text-white text-lg">
         <h1 className="text-4xl font-semibold tracking-wide text-center">{projet.nom}</h1>
         <div>
           <p>{projet.description_longue}</p>

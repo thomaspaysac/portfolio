@@ -16,10 +16,10 @@ type Props = {
 function ScreenshotsContainer ({ hover, screenshots } : { hover: boolean, screenshots: string[] }) {
   return (
     <>
-      <Image className={`project-screenshot_main absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 object-contain rounded-2xl shadow-2xl transition-opacity duration-700 ${hover ? 'opacity-0' : 'opacity-1'}`}
+      <Image className={`project-screenshot_main md:absolute top-1/2 left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 object-contain rounded-2xl shadow-2xl transition-opacity duration-700 ${hover ? 'md:opacity-0' : 'opacity-1'}`}
         src={screenshots[0]} width={800} height={800} unoptimized={true} alt=""
       />
-      <div className={`absolute flex w-full h-full skew-y-2 justify-center align-center transition-opacity duration-700 ${hover ? 'opacity-1' : 'opacity-0'}`}>
+      <div className={`absolute hidden md:flex w-full h-full skew-y-2 justify-center align-center transition-opacity duration-700 ${hover ? 'md:opacity-1' : 'opacity-0'}`}>
       {
         screenshots.slice(1).reverse().map((el, i) => {
           const offset = screenshots.length;
@@ -41,13 +41,13 @@ export default function ProjectCard ({ id, nom, description, screenshots, url, o
 
   return (
     <div 
-      className={`project-card flex ${odd? 'flex-row' : 'flex-row-reverse'} gap-8 justify-center text-lg h-[600px] rounded-lg`}
+      className={`project-card flex flex-col-reverse ${odd? 'md:flex-row' : 'md:flex-row-reverse'} gap-2 md:gap-8 justify-center text-lg md:h-[38vw] rounded-lg`}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
     >
-      <div className="project-info w-1/3 self-center">
-        <h2 className="text-4xl mb-4 font-semibold tracking-wide">{nom}</h2>
+      <div className="project-info w-full md:w-1/3 self-center">
+        <h2 className="text-2xl md:text-4xl md:mb-4 font-semibold tracking-wide">{nom}</h2>
         <div className="text-lg mb-4">{description}</div>
-        <div className="project-links flex gap-2">
+        <div className="project-links flex justify-between md:justify-start gap-2">
           <Link href={`/portfolio/${id}`}>
             <button className="bg-indigo-500 px-5 py-2 text-white rounded transition-all hover:bg-indigo-600">
               Voir les détails
@@ -58,7 +58,7 @@ export default function ProjectCard ({ id, nom, description, screenshots, url, o
           </a>
         </div>
       </div>
-      <div className="project-screenshots relative w-2/3">
+      <div className="project-screenshots md:relative md:w-2/3">
         <ScreenshotsContainer hover={hover} screenshots={screenshots} />
       </div>
     </div>

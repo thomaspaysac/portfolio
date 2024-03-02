@@ -7,7 +7,7 @@ import { montserrat } from "./lib/fonts";
 
 export default function Home() {
   return (
-    <div className="homepage flex min-h-screen flex-col p-4 py-10 md:px-24 md:py-12 gap-2 md:gap-10 text-white">
+    <div className="homepage flex min-h-[calc(100vh-80px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-2 md:gap-10 text-white">
       <div>
         <h1 className="text-4xl md:text-6xl text-center md:text-start mb-8 ">Thomas Paysac</h1>
         <h2 className="text-3xl md:text-4xl text-center md:text-start font-bold tracking-wide my-4 ">Développeur Web Fullstack</h2>
