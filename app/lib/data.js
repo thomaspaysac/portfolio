@@ -78,7 +78,7 @@ const projects = [
   {
     id: "textera",
     nom: "Textera",
-    description_courte: "Application web de messagerie",
+    description_courte: "Application web progressive de messagerie permettant des conversations privées et en groupe.",
     description_longue: "Application web progressive de messagerie, offrant des conversation privées entre les utilisateurs et des conversations de groupe.",
     objectif: ["La demande était de créer une application similaire à WhatsApp avec authentification sécurisée des utilisateurs, échange de messages avec un autre utilisateur, et personnalisation du profil utilisateur."],
     resultat: ["Aux fonctionnalités minimales ont été ajoutées les conversations de groupe et l'envoi d'images. Un compte visiteur a été établi afin de pouvoir proposer une démonstration du site. Concernant l'interface, l'application a été pensée « mobile-first » avec un visuel se rapprochant volontairement de WhatsApp.", "Afin de me familiariser avec différents services durant cet exercices, le backend utilise Supabase pour l'authentification des utilisateurs, MongoDB pour la base de données, et Firebase Storage pour le stockage des fichiers image. L'API permettant de communiquer avec ces services a été créée avec Express.", "Le site a par la suite été converti en application web progressive, permettant de bénéficier d'une interface plus naturelle sur téléphone."],
@@ -97,7 +97,7 @@ const projects = [
   {
     id: "talkbook",
     nom: "Talkbook",
-    description_courte: "Réseau social",
+    description_courte: "Site de réseau social inspiré de Facebook.",
     description_longue: "Un exemple de réseau social basique, permettant d'échanger du contenu avec les autres utilisateurs et de créer une liste d'amis.",
     objectif: ["La demande était de créer un site similaire à Facebook, avec : inscription obligatoire pour accéder au site, création d'un profil utilisateur, envoi de requêtes d'amitié à d'autres utilisateurs, création de posts textuels, affichage de tous les posts des amis sur une page index, possibilité de « liker » et de commenter chaque post, et une page de recensement de tous les utilisateurs inscrits."],
     resultat: ["Aux fonctionnalités minimales ont été ajoutées l'édition de la photo de profil utilisateur, l'ajout d'une photo supplémentaire en fond de profil, la possibilité d'ajouter un fichier image aux posts, la possibilité de réinitialisation du mot de passe utilisateur, le choix entre plusieurs thèmes de couleurs, ainsi qu'une localisation du site en anglais et en français. Un compte visiteur a été établi afin de pouvoir proposer une démonstration du site.", "L'interface se base volontairement sur celle de Facebook, et est responsive afin de proposer la meilleure expérience possible sur ordinateur comme sur téléphone.", "Mon objectif personnel a été d'utiliser uniquement Supabase pour gérer les différents services du site afin de gagner en expertise avec un système open-source et me familiariser avec l'administration d'une base de données PostgreSQL."],
@@ -110,6 +110,23 @@ const projects = [
       "/screens/talkbook/2.png",
       "/screens/talkbook/3_mobile.png",
       "/screens/talkbook/4_mobile.png"
+    ]
+  },
+  {
+    id: "toodoo",
+    nom: "Toodoo",
+    description_courte: "Application web de liste de tâches.",
+    description_longue: "Application web de liste de tâches permettant de créer et regrouper des tâches en listes personnalisables et de les trier selon plusieurs critères.",
+    objectif: ["La demande était de développer un site permettant de créer des tâches en leur attribuant un titre, une description, une échéance et un degré de priorité, avec possibilité de modifier ces informations ultérieurement."],
+    resultat: ["Une fonctionnalité supplémentaire de tri de toutes les tâches selon leur échéance a été ajoutée (toutes les tâches à terminer dans la semaine, dans le mois, ...). Les listes de tâches peuvent être personnalisées en leur ajoutant une description et en leur assignant une couleur d'identification.", "L'utilisateur doit se connecter grâce à un compte Google pour pouvoir utiliser le service. L'authentification et la base de données se font à travers Google Firebase."],
+    frontend: techs_frontend.filter(el => el.id === "javascript" || el.id === "html" || el.id === "css"),
+    backend: techs_backend.filter(el => el.id === "firebase"),
+    url: "https://toodoo-81e7d.web.app/",
+    repo: "https://github.com/thomaspaysac/todo-app",
+    screenshots: [
+      "/screens/toodoo/1.png",
+      "/screens/toodoo/2.png",
+      "/screens/toodoo/3.png",
     ]
   }
 ];

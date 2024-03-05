@@ -50,13 +50,13 @@ export default function ProjectCard ({ id, nom, description, screenshots, url, o
 
   return (
     <div 
-      className={`project-card flex flex-col-reverse ${odd? 'md:flex-row' : 'md:flex-row-reverse'} gap-2 md:gap-8 justify-center text-lg md:h-[38vw] rounded-lg`}
+      className={`project-card flex flex-col-reverse ${odd? 'md:flex-row' : 'md:flex-row-reverse'} gap-2 md:gap-8 justify-center text-lg md:p-8 md:bg-zinc-500/20 rounded-lg shadow-lg md:h-[38vw]`}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
     >
       <div className="project-info w-full md:w-1/3 self-center">
         <h2 className="text-2xl md:text-4xl md:mb-4 font-semibold tracking-wide">{nom}</h2>
         <div className="text-lg mb-4">{description}</div>
-        <div className="project-links flex justify-between md:justify-start gap-2">
+        <div className="project-links flex flex-wrap justify-between md:justify-start gap-2">
           <Link href={`/portfolio/${id}`}>
             <button className="bg-indigo-500 px-5 py-2 text-white rounded transition-all hover:bg-indigo-600">
               Voir les détails
