@@ -23,12 +23,21 @@ function ScreenshotsContainer ({ hover, screenshots } : { hover: boolean, screen
       {
         screenshots.slice(1).reverse().map((el, i) => {
           const offset = screenshots.length;
-          return (
-            <Image 
-              className={`absolute object-cover -translate-y-1/2 -translate-x-1/2 rounded shadow-md`} key={i} src={el} width={150} height={150} unoptimized={true} alt=""
-              style={{top: `${50+i*4-offset*1.5}%`, left:`${50+i*12-offset*4.5}%`}}   
-            />
-          )
+          if (el.includes("mobile")) {
+            return (
+              <Image 
+                className={`absolute object-cover -translate-y-1/2 -translate-x-1/2 rounded shadow-md md:rounded-lg md:border-[#222222] border-4 md:border-y-[16px]`} key={i} src={el} width={150} height={150} unoptimized={true} alt=""
+                style={{top: `${50+i*4-offset*1.5}%`, left:`${50+i*12-offset*4.5}%`}}   
+              />
+            )  
+          } else {
+            return (
+              <Image 
+                className={`absolute object-cover -translate-y-1/2 -translate-x-1/2 rounded shadow-md md:rounded-lg md:border-[#E5E5E5] md:border-2 md:border-t-[16px]`} key={i} src={el} width={300} height={300} unoptimized={true} alt=""
+                style={{top: `${50+i*4-offset*2}%`, left:`${50+i*12-offset*4.5}%`}}   
+              />
+            )  
+          }
         })
       }
       </div>

@@ -88,10 +88,10 @@ const projects = [
     repo: "https://github.com/thomaspaysac/textera",
     screenshots: [
       "/screens/textera/1.png",
-      "/screens/textera/2.jpg",
-      "/screens/textera/3.jpg",
-      "/screens/textera/4.jpg",
-      "/screens/textera/5.jpg",
+      "/screens/textera/2_mobile.jpg",
+      "/screens/textera/3_mobile.jpg",
+      "/screens/textera/4_mobile.jpg",
+      "/screens/textera/5_mobile.jpg",
     ]
   },
   {
@@ -108,8 +108,8 @@ const projects = [
     screenshots: [
       "/screens/talkbook/1.png",
       "/screens/talkbook/2.png",
-      "/screens/talkbook/3.png",
-      "/screens/talkbook/4.png"
+      "/screens/talkbook/3_mobile.png",
+      "/screens/talkbook/4_mobile.png"
     ]
   }
 ];
