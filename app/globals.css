@@ -1,40 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 main,
 header {
-  font-family: "Montserrat", Helvetica, sans-serif
-}
+  font-family: "Montserrat", Helvetica, sans-serif; }
 
 main {
-  background: url('../public/background.jpg');
-  background-size: cover;
-}
+  background: url("../public/background.jpg");
+  background-size: cover; }
 
 .nav-link {
-  text-decoration: underline 4px rgba(255,255,255,0);
+  text-decoration: underline 4px rgba(255, 255, 255, 0);
   text-underline-offset: 0;
-  transition: text-decoration-color 300ms, text-underline-offset 300ms;
-}
-
-.nav-link:hover {
-  text-decoration-color: rgba(79, 70, 229,1);
-  text-underline-offset: 8px;
-}
-
-
-.nav-link.active {
-  text-decoration-color: rgba(79, 70, 229,1);
-  text-underline-offset: 8px;
-}
+  transition: text-decoration-color 300ms, text-underline-offset 300ms; }
+  .nav-link:hover {
+    text-decoration-color: #4f46e5;
+    text-underline-offset: 8px; }
+  .nav-link .active {
+    text-decoration-color: #4f46e5;
+    text-underline-offset: 8px; }
 
 .tech-card {
-  background: linear-gradient(to bottom right, rgba(82,82,91,1) 0%, rgba(63,63,70,1) 100%);
-  transition: all 500ms ease-out;
-}
+  background: linear-gradient(to bottom right, #52525b 0%, #3f3f46 100%);
+  transition: all 500ms ease-out; }
 
 /*.tech-card::before {
   position: absolute;
@@ -58,12 +47,14 @@ main {
   opacity: 1;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }*/
+.blog-post_content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  margin-top: 64px; }
+.blog-post_content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1rem; }
 
-.item {
-  width: 56%;
-  overflow: visible;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
+/*# sourceMappingURL=globals.css.map */

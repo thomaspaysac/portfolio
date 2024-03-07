@@ -20,8 +20,7 @@ const ARTICLE_GRAPHQL_FIELDS = `
     }
   }
   date
-  authorName
-  categoryName
+  category
   articleImage {
     url
   }
@@ -51,7 +50,7 @@ async function fetchGraphQL(query, preview = false) {
 }
 
 function extractArticleEntries(fetchResponse) {
-  return fetchResponse?.data?.knowledgeArticleCollection?.items;
+  return fetchResponse?.data?.blogPostCollection?.items;
 }
 
 export async function getAllArticles(
@@ -63,7 +62,7 @@ export async function getAllArticles(
 ) {
   const articles = await fetchGraphQL(
     `query {
-        knowledgeArticleCollection(where:{slug_exists: true}, order: date_DESC, limit: ${limit}, preview: ${
+        blogPostCollection(where:{slug_exists: true}, order: date_DESC, limit: ${limit}, preview: ${
       isDraftMode ? "true" : "false"
     }) {
           items {
@@ -82,7 +81,7 @@ export async function getArticle(
 ) {
   const article = await fetchGraphQL(
     `query {
-        knowledgeArticleCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
+        blogPostCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
       isDraftMode ? "true" : "false"
     }) {
           items {
