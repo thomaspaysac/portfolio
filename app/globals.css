@@ -36,7 +36,7 @@ main {
   transition: all 500ms ease-out;
 }
 
-.tech-card::before {
+/*.tech-card::before {
   position: absolute;
   content: '';
   top: 0;
@@ -57,7 +57,7 @@ main {
 .tech-card:hover::before {
   opacity: 1;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
+}*/
 
 .item {
   width: 56%;
