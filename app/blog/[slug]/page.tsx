@@ -7,12 +7,12 @@ import NotFound from "@/app/not-found";
 export async function generateStaticParams() {
   const allArticles = await getAllArticles();
 
-  return allArticles.map((article: any) => ({
+  return allArticles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-export default async function ArticleDetail(params: any) {
+export default async function ArticlePage({ params }) {
   const article = await getArticle(params.slug);
 
   if (!article) {
