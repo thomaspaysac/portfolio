@@ -1,19 +1,17 @@
 import { getAllArticles, getArticle } from "@/app/lib/contentful_api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { redirect } from "next/navigation";
-import Image from "next/image";
-import NotFound from "@/app/not-found";
 
-export async function generateStaticParams() {
-  const allArticles = await getAllArticles();
-  if (allArticles) {
-    return allArticles.map((article) => ({
-      slug: article.slug,
-    }));
-  } else {
-    return null;
-  }
-}
+/*export async function generateStaticParams() {
+  let allArticles: any[] = [];
+  allArticles = await getAllArticles();
+  console.log(allArticles.length);
+
+  return allArticles.map((article: Object) => ({
+    slug: article.slug,
+    articles: allArticles,
+  }));
+}*/
 
 export default async function ArticlePage({ params }) {
   const article = await getArticle(params.slug);
