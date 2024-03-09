@@ -12,7 +12,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function KnowledgeArticlePage({params}) {
+export default async function ArticleDetail(params: any) {
   const article = await getArticle(params.slug);
 
   if (!article) {

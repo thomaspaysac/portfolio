@@ -17,7 +17,7 @@ export default async function Page () {
       <div>Cette page est vide {'('}pour le moment{')'}.</div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {articles.map((article) => (
+              {articles.map((article: any) => (
                   <article key={article.sys.id} className="h-full flex flex-col rounded-lg shadow-lg overflow-hidden">
                     <Image
                       alt="placeholder"
