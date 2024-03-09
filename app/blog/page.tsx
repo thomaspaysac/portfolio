@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllArticles } from "../lib/contentful_api";
+import { draftMode } from "next/headers";
 //import { getAllArticles } from "@/lib/api";
 
 export const metadata: Metadata = {
@@ -9,11 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page () {
-  const articles = await getAllArticles();
+  const { isEnabled } = draftMode();
+  const articles = await getAllArticles(3, isEnabled);
 
-  if (!articles) {
-    return null;
-  } else {
     return (
       <div className="flex min-h-[calc(100svh-80px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-2 text-white">
         <h1 className="text-4xl tracking-wide font-semibold">Blog</h1>
@@ -55,6 +54,4 @@ export default async function Page () {
               </div>
       </div>
     )
-  
-  }
 };

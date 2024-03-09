@@ -1,20 +1,20 @@
 import { getAllArticles, getArticle } from "@/app/lib/contentful_api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { redirect } from "next/navigation";
+import { draftMode } from "next/headers";
 
-/*export async function generateStaticParams() {
-  let allArticles: any[] = [];
-  allArticles = await getAllArticles();
-  console.log(allArticles.length);
+export async function generateStaticParams() {
+  const allArticles = await getAllArticles();
 
   return allArticles.map((article: Object) => ({
     slug: article.slug,
     articles: allArticles,
   }));
-}*/
+}
 
 export default async function ArticlePage({ params }) {
-  const article = await getArticle(params.slug);
+  const { isEnabled } = draftMode();
+  const article = await getArticle(params.slug, isEnabled);
 
   if (!article) {
     redirect('/404');
