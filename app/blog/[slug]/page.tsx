@@ -6,10 +6,13 @@ import NotFound from "@/app/not-found";
 
 export async function generateStaticParams() {
   const allArticles = await getAllArticles();
-
-  return allArticles.map((article) => ({
-    slug: article.slug,
-  }));
+  if (allArticles) {
+    return allArticles.map((article) => ({
+      slug: article.slug,
+    }));
+  } else {
+    return null;
+  }
 }
 
 export default async function ArticlePage({ params }) {
