@@ -7,7 +7,7 @@ header {
   font-family: "Montserrat", Helvetica, sans-serif; }
 
 main {
-  background: url("../public/background.jpg");
+  background: url("/background.jpg");
   background-size: cover; }
 
 .nav-link {
@@ -17,7 +17,7 @@ main {
   .nav-link:hover {
     text-decoration-color: #4f46e5;
     text-underline-offset: 8px; }
-  .nav-link .active {
+  .nav-link.active {
     text-decoration-color: #4f46e5;
     text-underline-offset: 8px; }
 

@@ -10,7 +10,7 @@ header {
 }
 
 main {
-  background: url('../public/background.jpg');
+  background: url('/background.jpg');
   background-size: cover;
 }
 
@@ -24,7 +24,7 @@ main {
     text-underline-offset: 8px;
   }
 
-  .active {
+  &.active {
     text-decoration-color: rgba(79, 70, 229,1);
     text-underline-offset: 8px;
   }

@@ -118,7 +118,7 @@ const projects = [
     description_courte: "Application web de liste de tâches.",
     description_longue: "Application web de liste de tâches permettant de créer et regrouper des tâches en listes personnalisables et de les trier selon plusieurs critères.",
     objectif: ["La demande était de développer un site permettant de créer des tâches en leur attribuant un titre, une description, une échéance et un degré de priorité, avec possibilité de modifier ces informations ultérieurement."],
-    resultat: ["Une fonctionnalité supplémentaire de tri de toutes les tâches selon leur échéance a été ajoutée (toutes les tâches à terminer dans la semaine, dans le mois, ...). Les listes de tâches peuvent être personnalisées en leur ajoutant une description et en leur assignant une couleur d'identification.", "L'utilisateur doit se connecter grâce à un compte Google pour pouvoir utiliser le service. L'authentification et la base de données se font à travers Google Firebase."],
+    resultat: ["Une fonctionnalité supplémentaire de tri de toutes les tâches selon leur échéance a été ajoutée (toutes les tâches à terminer dans la semaine, dans le mois, ...). Les listes de tâches peuvent être personnalisées en leur ajoutant une description et en leur assignant une couleur d'identification.", "L'utilisateur doit se connecter grâce à un compte Google pour pouvoir utiliser le service. L'authentification et la gestion de la base de données se font à travers Google Firebase."],
     frontend: techs_frontend.filter(el => el.id === "js" || el.id === "html" || el.id === "css"),
     backend: techs_backend.filter(el => el.id === "firebase"),
     url: "https://toodoo-81e7d.web.app/",
