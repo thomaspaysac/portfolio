@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteId: '1767197636539392000',
     creator: '@tommyBlablaXrd',
     creatorId: '1767197636539392000',
-    images: ["https://thomaspaysac.com/opengraph-image.png"], // Must be an absolute URL
+    //images: ["https://thomaspaysac.com/opengraph-image.png"], // Must be an absolute URL
   },
 };
 
