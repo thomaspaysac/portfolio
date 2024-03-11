@@ -13,6 +13,15 @@ export async function generateMetadata(
   return {
     title: `${article.title} | Thomas Paysac`,
     description: article.summary,
+    openGraph: {
+      title: `${article.title} | Thomas Paysac`,
+      description: article.summary,
+      images: [
+        {
+          url: article.articleImage.url,
+        },
+      ],
+    },
   }
 }
 
