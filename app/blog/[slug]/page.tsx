@@ -1,7 +1,19 @@
+import { Metadata, ResolvingMetadata } from "next";
 import { getAllArticles, getArticle } from "@/app/lib/contentful_api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { redirect } from "next/navigation";
 import { draftMode } from "next/headers";
+
+
+export async function generateMetadata(
+  params: Object,
+  parent: ResolvingMetadata
+): Promise<Metadata> { 
+  const article = await getArticle(params.params.slug);
+  return {
+    title: `${article.title} | Thomas Paysac`,
+  }
+}
 
 export async function generateStaticParams() {
   const allArticles = await getAllArticles();
