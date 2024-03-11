@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: "Thomas Paysac | Développeur Web",
   description: "Développeur Web Fullstack | React, Express, Node.js, MongoDB",
   metadataBase: new URL('https://thomaspaysac.com/'),
+  twitter: {
+    card: 'summary_large_image',
+    title: "Thomas Paysac | Développeur Web",
+    description: "Développeur Web Fullstack | React, Express, Node.js, MongoDB",
+    siteId: '1767197636539392000',
+    creator: '@tommyBlablaXrd',
+    creatorId: '1767197636539392000',
+    images: ["https://thomaspaysac.com/opengraph-image.png"], // Must be an absolute URL
+  },
 };
 
 export default function RootLayout({
