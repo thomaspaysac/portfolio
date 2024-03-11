@@ -22,6 +22,15 @@ export async function generateMetadata(
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} | Thomas Paysac`,
+      description: article.summary,
+      siteId: '1767197636539392000',
+      creator: '@tommyBlablaXrd',
+      creatorId: '1767197636539392000',
+      images: [article.articleImage.url], // Must be an absolute URL
+    },  
   }
 }
 
