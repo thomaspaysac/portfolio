@@ -29,7 +29,7 @@ export async function generateMetadata(
       siteId: '1767197636539392000',
       creator: '@tommyBlablaXrd',
       creatorId: '1767197636539392000',
-      images: [article.articleImage.url], // Must be an absolute URL
+      //images: [article.articleImage.url], // Must be an absolute URL
     },  
   }
 }
