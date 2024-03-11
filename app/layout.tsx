@@ -7,6 +7,7 @@ import { montserrat } from "./lib/fonts";
 export const metadata: Metadata = {
   title: "Thomas Paysac | Développeur Web",
   description: "Développeur Web Fullstack | React, Express, Node.js, MongoDB",
+  metadataBase: new URL('https://thomaspaysac.com/'),
 };
 
 export default function RootLayout({
