@@ -12,6 +12,7 @@ export async function generateMetadata(
   const article = await getArticle(params.params.slug);
   return {
     title: `${article.title} | Thomas Paysac`,
+    description: article.summary,
   }
 }
 
