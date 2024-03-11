@@ -1,4 +1,4 @@
-const got = require('got');
+import { got } from 'got';
 const crypto = require('crypto');
 const OAuth = require('oauth-1.0a');
 const qs = require('querystring');
