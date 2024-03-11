@@ -23,7 +23,7 @@ export async function generateMetadata(
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       title: `${article.title} | Thomas Paysac`,
       description: article.summary,
       siteId: '1767197636539392000',
