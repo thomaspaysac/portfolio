@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllArticles } from "../lib/contentful_api";
 import { draftMode } from "next/headers";
+import Button from "./Button";
+import { postTweet } from "@/app/api/social/route";
 //import { getAllArticles } from "@/lib/api";
 
 export const metadata: Metadata = {
@@ -12,12 +14,12 @@ export const metadata: Metadata = {
 export default async function Page () {
   const { isEnabled } = draftMode();
   const articles = await getAllArticles(3, isEnabled);
+  const post = postTweet('test tweet!');
 
     return (
       <div className="flex min-h-[calc(100svh-80px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-2 text-white">
         <h1 className="text-4xl tracking-wide font-semibold">Blog</h1>
-        <div>Cette page est vide {'('}pour le moment{')'}.</div>
-  
+        <div>Cette page est vide {'('}pour le moment{')'}.</div>  
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {articles.map((article: any) => (
                     <article key={article.sys.id} className="h-full flex flex-col rounded-lg shadow-lg overflow-hidden">
