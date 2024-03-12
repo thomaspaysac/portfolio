@@ -27,7 +27,8 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  const { searchParams } = new URL(request.url);
+  const { searchParams } = new URL(request.entry.fields.slug);
   const slug = searchParams.get("slug");
-  postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
+  console.log(searchParams);
+  //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
