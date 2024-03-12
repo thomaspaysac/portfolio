@@ -26,5 +26,6 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  postTweet('Hello world! This is my first tweet with the Twitter API v2.');
+  console.log(request);
+  //postTweet('Hello world! This is my first tweet with the Twitter API v2.');
 }
