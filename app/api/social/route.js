@@ -1,4 +1,5 @@
 import { getArticle } from "@/app/lib/contentful_api";
+var jsonBody = require("body/json")
 const { TwitterApi } = require('twitter-api-v2');
 
 const client = new TwitterApi({
@@ -27,6 +28,7 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  console.log(request.body.fields);
+  const body = jsonBody(request);
+  console.log(body);
   //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
