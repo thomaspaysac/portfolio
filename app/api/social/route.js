@@ -28,7 +28,11 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  const body = jsonBody(request);
-  console.log(body);
+  jsonBody(request.body, function(err, body) {
+    if (err) {
+      console.log(err)
+    }
+    console.log(body);
+  });
   //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
