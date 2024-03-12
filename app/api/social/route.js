@@ -1,3 +1,4 @@
+import { getArticle } from "@/app/lib/contentful_api";
 const { TwitterApi } = require('twitter-api-v2');
 
 const client = new TwitterApi({
@@ -26,6 +27,7 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  console.log(request);
-  postTweet('Hello world! This is my first tweet with the Twitter API v2.');
+  const { searchParams } = new URL(request.url);
+  const slug = searchParams.get("slug");
+  postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
