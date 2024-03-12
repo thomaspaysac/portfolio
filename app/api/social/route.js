@@ -27,6 +27,6 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  console.log(request.fields.title);
+  console.log(request.body);
   //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
