@@ -28,11 +28,8 @@ export async function postTweet(tweetText) {
 }
 
 export async function POST(request) {
-  jsonBody(request.body, function(err, body) {
-    if (err) {
-      console.log(err)
-    }
-    console.log(body);
-  });
+  const res= await request.body.json();
+  console.log(res);
+  return new Response("Command launched", { data: res });
   //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
