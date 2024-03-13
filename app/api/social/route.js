@@ -50,7 +50,7 @@ async function toJSON(body) {
 
 export async function POST(req) {
   const data = await toJSON(req.body);
-  console.log(data);
+  const slug = data.fields.slug['en-US'];
+  postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
   return new Response("Command launched", { statut: 200 });
-  //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
