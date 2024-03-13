@@ -1,5 +1,3 @@
-import { getArticle } from "@/app/lib/contentful_api";
-var jsonBody = require("body/json")
 const { TwitterApi } = require('twitter-api-v2');
 
 const client = new TwitterApi({
@@ -9,7 +7,6 @@ const client = new TwitterApi({
   accessSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-const appOnlyClientFromConsumer = await client.appLogin();
 const rwClient = client.readWrite;
 
 export async function postTweet(tweetText) {
