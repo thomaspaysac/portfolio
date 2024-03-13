@@ -14,8 +14,9 @@ export async function postTweet(tweetText) {
     text: tweetText
   });
   if (error) {
-    console.log(error);
+    return {message: error, status: 500};
   }
+  return {message: 'OK', status: 200}
 }
 
 async function toJSON(body) {
@@ -44,8 +45,8 @@ export async function POST(req) {
   const data = await toJSON(req.body);
   const slug = data.fields.slug['en-US'];
   const message = data.fields.socialText['en-US'];
-  console.log(slug, message);
   // Create Tweet from data
-  postTweet(`${message} https://thomaspaysac.com/blog/${slug}`);
+  const request = await postTweet(`${message} https://thomaspaysac.com/blog/${slug}`);
+  console.log(request);
   return new Response("Command launched", { statut: 200 });
 }
