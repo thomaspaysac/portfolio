@@ -47,6 +47,8 @@ export async function POST(req) {
   const message = data.fields.socialText['en-US'];
   // Create Tweet from data
   const request = await postTweet(`${message} https://thomaspaysac.com/blog/${slug}`);
-  console.log(request);
-  return new Response("Command launched", { statut: 200 });
+  if (request.status !== 200) {
+    return new Response("Tweet error", { status: 500 });
+  }
+  return new Response("Command launched", { status: 200 });
 }
