@@ -44,6 +44,7 @@ export async function POST(req) {
   const data = await toJSON(req.body);
   const slug = data.fields.slug['en-US'];
   const message = data.fields.socialText['en-US'];
+  console.log(slug, message);
   // Create Tweet from data
   postTweet(`${message} https://thomaspaysac.com/blog/${slug}`);
   return new Response("Command launched", { statut: 200 });
