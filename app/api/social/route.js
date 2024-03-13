@@ -28,9 +28,9 @@ export async function postTweet(tweetText) {
 }
 
 export async function GET(req) {
-  console.log(req.body);
+  console.log(req);
   //const reader = req.body.getReader();
   
-  return new Response("Command launched", { data: res });
+  return new Response("Command launched", { statut: 200 });
   //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
