@@ -19,12 +19,6 @@ export async function postTweet(tweetText) {
   if (error) {
     console.log(error);
   }
-  /*try {
-    const tweet = await client.v2.tweet(tweetText);
-    console.log(`Tweet posted with ID ${tweet.data.id}`);
-  } catch (error) {
-    console.error(`Failed to post tweet: ${error}`);
-  }*/
 }
 
 async function toJSON(body) {
@@ -49,8 +43,11 @@ async function toJSON(body) {
 }
 
 export async function POST(req) {
+  // Get data from new post
   const data = await toJSON(req.body);
   const slug = data.fields.slug['en-US'];
-  postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
+  const message = data.fields.socialText['en-US'];
+  // Create Tweet from data
+  postTweet(`${message} https://thomaspaysac.com/blog/${slug}`);
   return new Response("Command launched", { statut: 200 });
 }
