@@ -27,10 +27,30 @@ export async function postTweet(tweetText) {
   }*/
 }
 
-export async function GET(req) {
-  console.log(req);
-  //const reader = req.body.getReader();
-  
+async function toJSON(body) {
+  const reader = body.getReader(); // `ReadableStreamDefaultReader`
+  const decoder = new TextDecoder();
+  const chunks = [];
+
+  async function read() {
+    const { done, value } = await reader.read();
+
+    // all chunks have been read?
+    if (done) {
+      return JSON.parse(chunks.join(''));
+    }
+
+    const chunk = decoder.decode(value, { stream: true });
+    chunks.push(chunk);
+    return read(); // read the next chunk
+  }
+
+  return read();
+}
+
+export async function POST(req) {
+  const data = await toJSON(req.body);
+  console.log(data);
   return new Response("Command launched", { statut: 200 });
   //postTweet(`New post! Find it at https://thomaspaysac.com/blog/${slug}`);
 }
