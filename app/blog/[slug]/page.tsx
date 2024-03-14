@@ -56,8 +56,8 @@ export default async function ArticlePage({ params }) {
       <h2 className="text-6xl font-bold tracking-wide mb-4">
         {article.title}
       </h2>
-      <p className="mb-2">{article.summary}</p>
-      <p className="mb-6">Published {article.date}</p>
+      <p className="mb-6 italic">Published {article.date}</p>
+      <p className="post-summary mb-2">{article.summary}</p>
       <div className="blog-post_content">
         {documentToReactComponents(article.details.json)}
       </div>

@@ -45,7 +45,10 @@ export async function POST(req) {
   const data = await toJSON(req.body);
   const slug = data.fields.slug['en-US'];
   const message = data.fields.socialText['en-US'];
-  // Create Tweet from data
+  if (!message) {
+    return new Response("This post will not be dispatched to social media", { status: 200 });
+  }
+  // If there is a socialText value, create Tweet from data
   const request = await postTweet(`${message} https://thomaspaysac.com/blog/${slug}`);
   if (request.status !== 200) {
     return new Response("Tweet error", { status: 500 });
