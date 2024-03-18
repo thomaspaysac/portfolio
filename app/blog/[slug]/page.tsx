@@ -6,7 +6,6 @@ import { draftMode } from "next/headers";
 import Image from "next/image";
 import { format } from 'date-fns';
 import {fr} from 'date-fns/locale';
-import TestButton from "@/app/ui/Button";
 
 
 export async function generateMetadata(

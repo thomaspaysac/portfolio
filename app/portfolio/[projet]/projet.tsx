@@ -15,7 +15,7 @@ export default function Projet () {
         <h1 className="text-4xl font-semibold tracking-wide text-center">{projet.nom}</h1>
         <div>
           <p>{projet.description_longue}</p>
-        </div>
+        </div>        
         <div className="self-center flex items-center gap-8">
           <a href={projet.url} target="_blank">
             <button className="text-xl flex items-center gap-2 bg-emerald-500 px-4 py-2 rounded mb-6 shadow transition-all hover:bg-emerald-600">
@@ -76,6 +76,29 @@ export default function Projet () {
                 }
               </div>
             </div>
+          </div>
+        </div>
+        <div className="mb-6">
+          <h3 className="text-3xl mb-2">Galerie</h3>
+          <div className="w-full h-0.5 rounded bg-indigo-500/75 mb-4 shadow-lg"></div>
+          <div className="flex flex-col items-center flex-wrap md:flex-row md:justify-center gap-8">
+            {
+              projet.screenshots.map((el) => {
+                if (el.includes("mobile")) {
+                  return (
+                    <Image 
+                      className={`rounded shadow-md md:rounded-lg md:border-[#222222] border-4 md:border-y-[16px]`} key={el} src={el} width={220} height={300} unoptimized={true} alt=""
+                    />
+                  )  
+                } else {
+                  return (
+                    <Image 
+                      className={`rounded shadow-md md:rounded-lg md:border-[#E5E5E5] md:border-2 md:border-t-[16px]`} key={el} src={el} width={600} height={300} unoptimized={true} alt=""
+                    />
+                  )  
+                }
+              })
+            }
           </div>
         </div>
       </div>
