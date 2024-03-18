@@ -54,14 +54,14 @@ export default async function ArticlePage({ params }) {
 
   return (
     <div className="blog-post min-h-[calc(100vh-80px)] p-4 py-10 md:px-[20vw] md:py-12 gap-10 text-white">
-      <div className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-sm font-semibold text-zinc-800">
+      <div className="inline-block rounded-2xl break-all bg-zinc-100 px-3 py-1 text-sm font-semibold text-zinc-800">
         {article.category}
       </div>
       <h2 className="text-6xl font-bold tracking-wide my-4">
         {article.title}
       </h2>
       <p className="mb-6 italic">Published {article.date}</p>
-      <p className="post-summary mb-2">{article.summary}</p>
+      <p className="post-summary mb-2 break-all">{article.summary}</p>
       <Image src={article.articleImage.url} height={1000} width={1000} alt={"article image"} className="aspect-[16/9] object-cover w-full rounded-lg my-8" />
       <div className="blog-post_content">
         {documentToReactComponents(article.details.json)}
