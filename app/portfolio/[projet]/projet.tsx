@@ -60,17 +60,17 @@ export default function Projet () {
               <h3 className="mb-3"><code>Frontend{'>'}</code></h3>
               <div className="flex flex-wrap row-span-2 gap-4">
                 {
-                  projet.frontend.map((tech) => {
+                  projet.frontend?.map((tech) => {
                     return <Card key={tech.id} source={tech.source} caption={tech.caption} />
                   })
                 }
               </div>
             </div>
-            <div className="tech-card backdrop-blur p-4 rounded-lg shadow-lg w-fit">
+            <div className={`tech-card backdrop-blur p-4 rounded-lg shadow-lg w-fit ${!projet.backend ? "hidden" : ""}`}>
               <h3 className="mb-3"><code>Backend{'>'}</code></h3>
               <div className="flex flex-wrap row-span-2 gap-4">
                 {
-                  projet.backend.map((tech) => {
+                  projet.backend?.map((tech) => {
                     return <Card key={tech.id} source={tech.source} caption={tech.caption} />
                   })
                 }

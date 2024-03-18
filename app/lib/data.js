@@ -113,12 +113,31 @@ const projects = [
     ]
   },
   {
+    id: "eys",
+    nom: "Evaluate Your Sounds",
+    description_courte: "Recréation du site Rate Your Music, réseau social musical.",
+    description_longue: "Recréation des fonctionnalités principales du site RateYourMusic, proposant les fonctionnalités principales d'un réseau social.",
+    objectif: ["Ce projet a été réalisé à des fins d'entraînement dans le but de développer mes compétences en React. Le site créé devait reproduire au plus proche un site déjà existant et proposant toutes les fonctionnalités CRUD (Create, Read, Update, Delete)."],
+    resultat: ["Les fonctionnalités majeures du site d'origine sont présentes, à savoir la création d'un compte utilisateur, la recherce et consultation d'informations sur des artistes et des albums, la création puis l'édition par les utilisateurs des pages albums, la possibilité d'écrire des critiques et d'attribuer des notes, et d'ajouter les albums à sa collection personnelle (possédé, liste de souhait) consultable sur le profil utilisateur.", "Des fonctionnalités sociales ont également été reproduites, il est possible d'envoyer des messages sur la page de profil des autres utilisateurs, de consulter leur collection, de les ajouter en tant qu'ami afin de pouvoir plus facilement les retrouver et mettre plus en valeur les notes qu'ils ont attribuées.", "L'authentification et la base de données se font à travers Firebase."],
+    frontend: techs_frontend.filter(el => el.id === "react" || el.id === "html" || el.id === "css"),
+    backend: techs_backend.filter(el => el.id === "firebase"),
+    url: "https://rym-clone.web.app/",
+    repo: "https://github.com/thomaspaysac/rateeverything",
+    screenshots: [
+      "/screens/eys/1.png",
+      "/screens/eys/2.png",
+      "/screens/eys/3.png",
+      "/screens/eys/4.png",
+      "/screens/eys/5.png",
+    ]
+  },
+  {
     id: "toodoo",
     nom: "Toodoo",
     description_courte: "Application web de liste de tâches.",
     description_longue: "Application web de liste de tâches permettant de créer et regrouper des tâches en listes personnalisables et de les trier selon plusieurs critères.",
     objectif: ["La demande était de développer un site permettant de créer des tâches en leur attribuant un titre, une description, une échéance et un degré de priorité, avec possibilité de modifier ces informations ultérieurement."],
-    resultat: ["Une fonctionnalité supplémentaire de tri de toutes les tâches selon leur échéance a été ajoutée (toutes les tâches à terminer dans la semaine, dans le mois, ...). Les listes de tâches peuvent être personnalisées en leur ajoutant une description et en leur assignant une couleur d'identification.", "L'utilisateur doit se connecter grâce à un compte Google pour pouvoir utiliser le service. L'authentification et la gestion de la base de données se font à travers Google Firebase."],
+    resultat: ["Une fonctionnalité supplémentaire de tri de toutes les tâches selon leur échéance a été ajoutée (toutes les tâches à terminer dans la semaine, dans le mois, ...). Les listes de tâches peuvent être personnalisées en leur ajoutant une description et en leur assignant une couleur d'identification.", "L'utilisateur doit se connecter grâce à un compte Google pour pouvoir utiliser le service. L'authentification et la gestion de la base de données se font à travers Firebase."],
     frontend: techs_frontend.filter(el => el.id === "js" || el.id === "html" || el.id === "css"),
     backend: techs_backend.filter(el => el.id === "firebase"),
     url: "https://toodoo-81e7d.web.app/",
@@ -128,7 +147,23 @@ const projects = [
       "/screens/toodoo/2.png",
       "/screens/toodoo/3.png",
     ]
-  }
+  },
+  {
+    id: "webpalettes",
+    nom: "WebPalettes",
+    description_courte: "Application web de création de palettes de couleurs orientées web design.",
+    description_longue: "Application web de création de palettes orientées web design, proposant à partir d'une couleur de base des couleurs d'accentuation ainsi que de palettes de gris et de messages d'erreurs.",
+    objectif: ["C'est un projet personnel qui avait pour but de me simplifier le travail de choix de palettes de couleurs, en proposant automatiquement des couleurs essentielles à l'interface (nuances de gris et de messages d'erreurs)."],
+    resultat: ["A partir de la couleur choisie par l'utilisateur, le site génère quatre palettes de base : une palette de nuances pour cette couleur, une palette de nuances pour les gris teintés de la couleur de base, une palette de gris neutres, et une palette de rouge pour les messages d'erreurs.", "L'utilisateur peut également sélectionner une des diverses options permettant de générer des palettes de couleurs complémentaires selon le modèle choisi (complémentaires, analogues, triadiques, ...)."],
+    frontend: techs_frontend.filter(el => el.id === "react" || el.id === "html" || el.id === "css"),
+    url: "https://webpalettes.netlify.app/",
+    repo: "https://github.com/thomaspaysac/palettes",
+    screenshots: [
+      "/screens/webpalettes/1.png",
+      "/screens/webpalettes/2.png",
+      "/screens/webpalettes/3.png",
+    ]
+  },
 ];
 
 module.exports = {
