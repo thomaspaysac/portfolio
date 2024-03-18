@@ -4,6 +4,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { redirect } from "next/navigation";
 import { draftMode } from "next/headers";
 import Image from "next/image";
+import { format } from 'date-fns';
+import {fr} from 'date-fns/locale';
+import TestButton from "@/app/ui/Button";
 
 
 export async function generateMetadata(
@@ -60,7 +63,7 @@ export default async function ArticlePage({ params }) {
       <h2 className="text-6xl font-bold tracking-wide my-4">
         {article.title}
       </h2>
-      <p className="mb-6 italic">Published {article.date}</p>
+      <p className="mb-6 italic">Publié le {format(new Date(article.date), 'd MMMM yyyy', {locale: fr})}</p>
       <p className="post-summary mb-2 break-all">{article.summary}</p>
       <Image src={article.articleImage.url} height={1000} width={1000} alt={"article image"} className="aspect-[16/9] object-cover w-full rounded-lg my-8" />
       <div className="blog-post_content">

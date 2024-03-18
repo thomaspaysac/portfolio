@@ -32,11 +32,9 @@ export default async function Page () {
                   width="350"
                 />
                 <div className="flex-1 p-6">
-                  <Link href={`/blog/${article.slug}`}>
                     <h3 className="text-2xl font-semibold tracking-wide py-4">
                       {article.title}
                     </h3>
-                  </Link>
                   <div className="inline-block rounded-2xl bg-zinc-100 px-3 py-1 text-sm font-semibold text-zinc-800 break-all">
                     {article.category}
                   </div>
@@ -44,12 +42,9 @@ export default async function Page () {
                     {article.summary}
                   </p>
                   <div className="flex justify-end mt-auto">
-                    <Link
-                      className="inline-flex h-10 items-center justify-center text-sm font-medium"
-                      href={`/blog/${article.slug}`}
-                    >
+                    <div className="inline-flex h-10 items-center justify-center text-sm font-medium">
                       Lire l&apos;article →
-                    </Link>
+                    </div>
                   </div>
                  </div>
                 </article>
