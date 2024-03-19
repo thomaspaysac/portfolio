@@ -11,7 +11,7 @@ export default function Projet () {
 
   if (projet) {
     return (
-      <div className="flex min-h-[calc(100vh-80px)] flex-col p-4 py-10 md:px-64 md:py-12 gap-8 text-white text-lg">
+      <div className="flex min-h-[calc(100vh-80px)] flex-col p-4 py-10 sm:px-32 lg:px-64 md:py-12 gap-8 text-white text-lg">
         <h1 className="text-4xl font-semibold tracking-wide text-center">{projet.nom}</h1>
         <div>
           <p>{projet.description_longue}</p>
@@ -87,7 +87,7 @@ export default function Projet () {
                 if (el.includes("mobile")) {
                   return (
                     <Image 
-                      className={`rounded shadow-md md:rounded-lg md:border-[#222222] border-4 md:border-y-[16px]`} key={el} src={el} width={220} height={300} unoptimized={true} alt=""
+                      className={`rounded shadow-md md:rounded-lg md:border-[#222222] md:border-4 md:border-y-[16px]`} key={el} src={el} width={220} height={300} unoptimized={true} alt=""
                     />
                   )  
                 } else {

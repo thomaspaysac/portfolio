@@ -116,7 +116,7 @@ const projects = [
     id: "eys",
     nom: "Evaluate Your Sounds",
     description_courte: "Recréation du site Rate Your Music, réseau social musical.",
-    description_longue: "Recréation des fonctionnalités principales du site RateYourMusic, proposant les fonctionnalités principales d'un réseau social.",
+    description_longue: "Recréation des fonctionnalités principales du site Rate Your Music, proposant les fonctionnalités principales d'un réseau social.",
     objectif: ["Ce projet a été réalisé à des fins d'entraînement dans le but de développer mes compétences en React. Le site créé devait reproduire au plus proche un site déjà existant et proposant toutes les fonctionnalités CRUD (Create, Read, Update, Delete)."],
     resultat: ["Les fonctionnalités majeures du site d'origine sont présentes, à savoir la création d'un compte utilisateur, la recherce et consultation d'informations sur des artistes et des albums, la création puis l'édition par les utilisateurs des pages albums, la possibilité d'écrire des critiques et d'attribuer des notes, et d'ajouter les albums à sa collection personnelle (possédé, liste de souhait) consultable sur le profil utilisateur.", "Des fonctionnalités sociales ont également été reproduites, il est possible d'envoyer des messages sur la page de profil des autres utilisateurs, de consulter leur collection, de les ajouter en tant qu'ami afin de pouvoir plus facilement les retrouver et mettre plus en valeur les notes qu'ils ont attribuées.", "L'authentification et la base de données se font à travers Firebase."],
     frontend: techs_frontend.filter(el => el.id === "react" || el.id === "html" || el.id === "css"),
