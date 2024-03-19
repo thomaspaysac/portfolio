@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }) {
   }
 
   return (
-    <div className="blog-post min-h-[calc(100vh-80px)] p-4 py-10 md:px-[20vw] md:py-12 gap-10 text-white">
+    <div className="blog-post min-h-[calc(100vh-80px-36px)] p-4 py-10 md:px-[20vw] md:py-12 gap-10 text-white">
       <div className="inline-block rounded-2xl break-all bg-zinc-100 px-3 py-1 text-sm font-semibold text-zinc-800">
         {article.category}
       </div>

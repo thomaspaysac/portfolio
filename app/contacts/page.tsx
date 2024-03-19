@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Page () {
   return (
-    <div className="flex min-h-[calc(100vh-80px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-10 text-white">
+    <div className="flex min-h-[calc(100vh-80px-36px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-10 text-white">
       <h1 className="text-4xl tracking-wide font-semibold">Contacts</h1>
       <div>
         <h2 className="text-2xl mb-4">Réseaux</h2>

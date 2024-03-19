@@ -14,9 +14,8 @@ export default async function Page () {
   const articles = await getAllArticles(0, isEnabled);
 
     return (
-      <div className="flex min-h-[calc(100svh-80px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-2 text-white">
-        <h1 className="text-4xl tracking-wide font-semibold">Blog</h1>
-        <div>Cette page est vide {'('}pour le moment{')'}.</div>
+      <div className="flex min-h-[calc(100svh-80px-36px)] flex-col p-4 py-10 md:px-24 md:py-12 gap-2 text-white">
+        <h1 className="text-4xl tracking-wide font-semibold mb-4">Blog</h1>
         <div className="flex flex-col md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {
             articles.map((article: any) => (

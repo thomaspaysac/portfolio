@@ -31,6 +31,7 @@ export default function RootLayout({
           <main className="bg-zinc-700 text-lg">
             {children}
           </main>
+        <Footer />
       </body>
     </html>
   );
