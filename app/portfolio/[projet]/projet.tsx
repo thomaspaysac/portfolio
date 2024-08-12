@@ -23,12 +23,14 @@ export default function Projet () {
               Visiter le site
             </button>
           </a>
+          { projet.repo &&
           <a href={projet.repo} target="_blank">
             <button className="text-base flex items-center gap-2 bg-slate-500/50 p-2 shadow rounded mb-6 transition-all hover:bg-slate-600/50">
               <Image src="/icons/code.png" height={16} width={16} alt="" unoptimized={true} />
               Voir le code
             </button>
           </a>
+          }
         </div>
         <div className="mb-6">
           <h3 className="text-3xl mb-2">L&apos;objectif</h3>

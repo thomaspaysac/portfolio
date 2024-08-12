@@ -56,6 +56,11 @@ const techs_backend = [
     id: "supabase",
     source: "/icons/supabase.png",
     caption: "Supabase"
+  },
+  {
+    id: "contentful",
+    source: "/icons/contentful.png",
+    caption: "Contentful"
   }
 ];
 
@@ -75,6 +80,24 @@ const social_links = [
 ];
 
 const projects = [
+  {
+    id: "picotech",
+    nom: "PicotechScanner",
+    description_courte: "Site complet pour PicotechScanner, entreprise d'imagerie médicale.",
+    description_longue: "Site complet pour PicotechScanner, permettant d'offrir une visiblité sur les produits et les projets futurs de l'entreprise.",
+    objectif: ["Créer un site internet accessible en Anglais et en Français, fournir des informations sur les produits de PicotechScanner, héberger le blog de l'entreprise, poster les offres d'emplois."],
+    resultat: ["Le site est réalisé avce Next.js, fournissant une interface créée en React.js et bénéficiant du routage propre à Next.js pour fournir le site en Anglais ou en Français selon les paramètres préférés de l'utilisateur.", "Le contenu est géré sur Contentful afin de permettre au client d'être autonome dans la mise à jour du site.", "L'interface a été modifiée en collaborant étroitement avec l'entreprise, selon une suite de feedback puis de modifications rapides pour atteindre le produit final."],
+    frontend: techs_frontend.filter(el => el.id === "react" || el.id === "html" || el.id === "tailwind"),
+    backend: techs_backend.filter(el => el.id === "next" || el.id === "contentful"),
+    url: "https://www.picotechscanner.com/",
+    screenshots: [
+      "/screens/picotech/1.png",
+      "/screens/picotech/2.png",
+      "/screens/picotech/3.png",
+      "/screens/picotech/4_mobile.png",
+      "/screens/picotech/5_mobile.png",
+    ]
+  },
   {
     id: "textera",
     nom: "Textera",

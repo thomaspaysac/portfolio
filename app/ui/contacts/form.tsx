@@ -12,6 +12,8 @@ export default function Form () {
     <form 
       ref={ref}
       action={ async (formData) => {
+        setError(false);
+        setMessageSent(false);
         const res = await sendEmail(formData);
         if (res.status !== 200) {
           setError(true);

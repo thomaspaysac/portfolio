@@ -3,24 +3,6 @@ const ARTICLE_GRAPHQL_FIELDS = `
     id
   }
   title
-  slug
-  summary
-  details {
-    json
-    links {
-      assets {
-        block {
-          sys {
-            id
-          }
-          url
-          description
-        }
-      }
-    }
-  }
-  date
-  category
   articleImage {
     url
   }
